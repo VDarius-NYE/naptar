@@ -181,6 +181,17 @@
                         </div>
                     </div>
 
+                    <div class="col-md-6">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="GDPR" name="GDPR" value="1">
+                            <label class="form-check-label" for="GDPR">GDPR</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <button class="btn btn-primary w-100" type="button">Regisztráció</button>
+                    </div>
+
                 </div>
 
             </form>
