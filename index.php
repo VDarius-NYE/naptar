@@ -115,35 +115,35 @@
 
                     <div class="col-md-6">
                         <div class="form-floating mb-3">
-                            <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+                            <input type="email" name="email" id="email" placeholder="Email*" class="form-control" required>
                             <label for="email">Email</label>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-floating mb-3">
-                            <input type="text" name="felhasznalonev" id="felhasznalonev" placeholder="Felhasználonév" class="form-control">
+                            <input type="text" name="felhasznalonev" id="felhasznalonev" placeholder="Felhasználonév*" class="form-control" required>
                             <label for="felhasznalonev">Felhasználónév</label>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-floating mb-3">
-                            <input type="password" name="jelszo" id="jelszo" placeholder="Jelszó" class="form-control">
+                            <input type="password" name="jelszo" id="jelszo" placeholder="Jelszó*" class="form-control" required>
                             <label for="jelszo">Jelszó</label>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-floating mb-3">
-                            <input type="password" name="jelszo_ujra" id="jelszo_ujra" placeholder="Jelszó újra" class="form-control">
+                            <input type="password" name="jelszo_ujra" id="jelszo_ujra" placeholder="Jelszó újra*" class="form-control" required>
                             <label for="jelszo_ujra">Jelszó újra</label>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-floating mb-3">
-                            <select name="szuletesi_ev" id="szuletesi_ev" class="form-select">
+                            <select name="szuletesi_ev" id="szuletesi_ev" class="form-select" required>
                                 <option value="">-- Év választása --</option>
                                 <?php for($i=date('Y')-100;$i<=date('Y')-10;$i++): ?>
 
@@ -151,7 +151,7 @@
 
                                 <?php endfor; ?>
                             </select>
-                            <label for="szuletesi_ev">Születési év</label>
+                            <label for="szuletesi_ev">Születési év*</label>
                         </div>
                     </div>
 
@@ -179,12 +179,9 @@
                             <input class="form-check-input" type="checkbox" role="switch" id="hirlevel" name="hirlevel" value="1">
                             <label class="form-check-label" for="hirlevel">Hírlevél</label>
                         </div>
-                    </div>
-
-                    <div class="col-md-6">
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" role="switch" id="GDPR" name="GDPR" value="1">
-                            <label class="form-check-label" for="GDPR">GDPR</label>
+                            <label class="form-check-label" for="GDPR">GDPR*</label>
                         </div>
                     </div>
 
