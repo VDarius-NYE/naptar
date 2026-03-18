@@ -10,9 +10,6 @@ float t[] [] = {{100,150,100,350},
              {170,230,170,180},//9
              {120,180,170,180},//10
              {120,180,120,230}
-           
-         
-       
      };
 void setup() {
   size(400,400);
@@ -41,6 +38,7 @@ void draw() {
     
   
 }
+float b = 0.2;
 
 void keyPressed(){
   if(key==CODED){
@@ -67,18 +65,41 @@ void keyPressed(){
         }  
         
   }else {
+    
     if(key=='n')
       for(int i=0;i<t.length;i++)
         for(int j=0;j<4;j++)
-          t[i][j]*=1.01;
+          t[i][j]= (t[i][j] -200)*1.01+200;
           
      if(key=='k')
       for(int i=0;i<t.length;i++)
         for(int j=0;j<4;j++)
-          t[i][j]*=.99;    
+          t[i][j]=(t[i][j]-200)*.99+200;    
           
-  
   }
-  
+  if(key=='t'){
+    for(int i = 0; i<t.length;i++){
+      for(int j =0; j<2; j++){
+        t[i][j*2]=-t[i][j*2]+200;
+      
+      }
+    
+    }
+     
+  }
+  if(key=='c')
+      for(int i=0;i<t.length;i++)
+        for(int j=0;j<4;j++)
+          t[i][j]=400-t[i][j];
+ 
+  if(key=='f')
+      for(int i=0;i<t.length;i++){
+        float x = t[i][0];
+        t[i][0]=(t[i][0]-400)*cos(b)-t[i][1]*sin(b); 
+        t[i][1]=(x-400)*sin(b)+t[i][1]*cos(b);
+        x=t[i][2];
+        t[i][2]=(t[i][2]-400)*cos(b)-t[i][3]*sin(b); 
+        t[i][3]=(x-400)*sin(b)+t[i][3]*cos(b);
+      }     
   
 }
